@@ -1,0 +1,39 @@
+DOCTYPE
+html
+	head
+		title #{title}: Express
+		link(href='/stylesheets/bootstrap.css', rel='stylesheet')
+		link(href='/stylesheets/style.css', rel='stylesheet')
+		script(src='/javascripts/bootstrap.js', type='text/javascript')
+
+	body
+		nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+			.container
+				// Brand and toggle get grouped for better mobile display
+				.navbar-header
+					button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+						span.sr-only Toggle navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.navbar-brand(href='#') Start Bootstrap
+				// Collect the nav links, forms, and other content for toggling
+				#bs-example-navbar-collapse-1.collapse.navbar-collapse
+					ul.nav.navbar-nav.pull-right
+						li(class=(title=='Members' ? 'active' : ''))
+							a(href='/') Members
+						if(!user)
+							li(class=(title=='Register' ? 'active' : ''))
+								a(href='/register') Register
+							li(class=(title=='Login' ? 'active' : ''))
+								a(href='/login') Login
+						if(user)
+							li
+								a(href='/logout') Logout
+				// /.navbar-collapse
+		.container
+			!= messages()
+			block content
+		.col-md-12
+			footer
+				p &copy; All Rights Reserved

@@ -1,0 +1,30 @@
+extends layout
+block content
+
+	.col-md-8.col-md-offset-2
+		
+		h1 Registration Panel
+		p Please register below by providing valid information
+		form(method='POST', action='/users/registration', enctype='multipart/form-data')
+			.form-group
+				label Name
+				input.form-control(type='text', name='name', placeholder='Enter Name')
+			.form-group
+				label Email
+				input.form-control(type='email', name='email', placeholder='Enter Email')
+			.form-group
+				label Password
+				input.form-control(type='password', name='password', placeholder='Enter Password')
+			.form-group
+				label Confirm Password
+				input.form-control(type='password', name='cPassword', placeholder='Re Enter Password')
+			.form-group
+				label Profile Image
+				input.form-control(type='file', name='avatar')
+			.form-group
+				button.btn.btn-default(type='submit') &ensp; SUBMIT &ensp;
+		br
+		ul.errors
+			if errors
+				each error, i in errors
+					li #{error.msg}	

@@ -1,0 +1,36 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+footer{
+  margin: 30px auto;
+  text-align: center;
+}
+
+ul.success li, ul.info li, ul.error li {
+  margin: 20px 0;
+  padding: 15px;
+  list-style: none;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+ul.success li{
+  color: 3c763d;
+  background: #dff0d8;
+  border-color:d6e9c6;
+}
+ul.info li{
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+
+}
+.narrowed{
+  margin:5px 20px;
+}
+
+.about-thumbs{
+  margin: 0 20%;
+}

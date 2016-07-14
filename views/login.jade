@@ -1,0 +1,14 @@
+extends layout
+block content
+	.col-md-8.col-md-offset-2
+		h1 Login
+		form(method='post', action='/users/login')
+			.form-group
+				label Email
+				input.form-control(type='email', name='email', placeholder='Enter Email')
+			.form-group
+				label Password
+				input.form-control(type='password', name='password', placeholder='Enter Password')
+
+			.form-group
+				button.btn.btn-primary.rounded(type='submit', name='submit') &ensp; LOGIN &ensp;
